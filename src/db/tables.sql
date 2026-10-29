@@ -7,7 +7,7 @@ CREATE TABLE estacion (
   id serial PRIMARY KEY,
   id_region integer,
   nombre varchar(512),
-  activa bit,
+  activa boolean,
   ubicacion varchar(512),
   url text,
   CONSTRAINT fk_region
