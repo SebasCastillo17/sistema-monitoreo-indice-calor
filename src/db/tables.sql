@@ -1,6 +1,6 @@
 CREATE TABLE region (
   id serial PRIMARY KEY,
-  nombre varchar(128)	
+  nombre varchar(128) UNIQUE	
 );
 
 CREATE TABLE estacion (

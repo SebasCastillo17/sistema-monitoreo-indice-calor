@@ -2,10 +2,12 @@ from .region import Region
 from src.db.session import session
 
 def Create(name):
-    region = Region(nombre=name)
-    session.add(region)
     try:
+        region = Region(nombre=name)
+        session.add(region)
         session.commit()
-    except Exception:
+        return region
+
+    except Exception as e:
         session.rollback()
-        raise
+        print(f"Error al crear la región '{name}'")
