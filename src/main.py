@@ -4,6 +4,7 @@
 # upload_region()
 # upload_station()
 
-from src.db.station.station_service import station_read_url
+from src.imn_monitor.upload.station_data import upload_station_data
 
-station_read_url()
+upload_station_data()
+

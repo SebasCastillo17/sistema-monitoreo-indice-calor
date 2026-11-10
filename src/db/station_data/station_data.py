@@ -10,10 +10,10 @@ class StationData(Base):
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     id_estacion: Mapped[int] = mapped_column(Integer, ForeignKey("estacion.id"))
     # TODO: change the name "fecha_creacion" for something more specific
-    fecha_creacion: Mapped[datetime] = mapped_column(DateTime)
-    temp: Mapped[float] = mapped_column(Float)
-    tmax: Mapped[float] = mapped_column(Float)
-    hr: Mapped[float] = mapped_column(Float)
+    fecha_creacion: Mapped[datetime] = mapped_column(DateTime, nullable=True)
+    temp: Mapped[float] = mapped_column(Float, nullable=True)
+    tmax: Mapped[float] = mapped_column(Float, nullable=True)
+    hr: Mapped[float] = mapped_column(Float, nullable=True)
 
 
 
