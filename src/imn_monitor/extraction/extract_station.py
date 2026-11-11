@@ -1,6 +1,5 @@
 from os import wait
 
-from src.db.region import region
 from src.imn_monitor.extraction.raw_data import raw_content
 from .extract_region import get_regions
 
