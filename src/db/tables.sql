@@ -6,8 +6,8 @@ CREATE TABLE region (
 CREATE TABLE estacion (
   id serial PRIMARY KEY,
   id_region integer,
-  nombre varchar(512),
-  activa bit,
+  nombre varchar(512) unique,
+  activa boolean,
   ubicacion varchar(512),
   url text,
   CONSTRAINT fk_region
@@ -18,7 +18,7 @@ CREATE TABLE estacion (
 CREATE TABLE datos_estacion (
   id serial PRIMARY KEY,
   id_estacion integer,
-  fecha_creacion timestamptz,
+  fecha_creacion timestamptz NOT NULL,
   temp real,
   tmax real,
   hr real,
